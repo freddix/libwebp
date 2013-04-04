@@ -1,11 +1,11 @@
 Summary:	WebP image codec library and tools
 Name:		libwebp
-Version:	0.2.1
+Version:	0.3.0
 Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://webp.googlecode.com/files/%{name}-%{version}.tar.gz
-# Source0-md5:	dc9b26f16bd5221414dbab95f13d4453
+# Source0-md5:	4183f4f51ada98976f14e7bd51f30938
 URL:		https://developers.google.com/speed/webp/
 BuildRequires:	autoconf
 BuildRequires:	automake
