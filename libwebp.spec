@@ -1,11 +1,11 @@
 Summary:	WebP image codec library and tools
 Name:		libwebp
-Version:	0.3.1
+Version:	0.4.0
 Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://webp.googlecode.com/files/%{name}-%{version}.tar.gz
-# Source0-md5:	dc862bb4006d819b7587767a9e83d31f
+# Source0-md5:	c8dd1d26eb9566833aba269b86d97e68
 URL:		https://developers.google.com/speed/webp/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -36,6 +36,7 @@ Header files for WebP library.
 %{__autoheader}
 %{__automake}
 %configure \
+	--disable-silent-rules	\
 	--disable-static
 %{__make}
 
@@ -56,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS COPYING ChangeLog NEWS PATENTS README
 %attr(755,root,root) %{_bindir}/cwebp
 %attr(755,root,root) %{_bindir}/dwebp
-%attr(755,root,root) %ghost %{_libdir}/libwebp.so.4
+%attr(755,root,root) %ghost %{_libdir}/libwebp.so.5
 %attr(755,root,root) %{_libdir}/libwebp.so.*.*.*
 %{_mandir}/man1/cwebp.1*
 %{_mandir}/man1/dwebp.1*
