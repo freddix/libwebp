@@ -1,11 +1,11 @@
 Summary:	WebP image codec library and tools
 Name:		libwebp
-Version:	0.4.0
+Version:	0.4.1
 Release:	1
 License:	BSD
 Group:		Libraries
-Source0:	http://webp.googlecode.com/files/%{name}-%{version}.tar.gz
-# Source0-md5:	c8dd1d26eb9566833aba269b86d97e68
+Source0:	http://downloads.webmproject.org/releases/webp/%{name}-%{version}.tar.gz
+# Source0-md5:	42bc79613ec5ee5b0e68ba97839c981e
 URL:		https://developers.google.com/speed/webp/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -45,6 +45,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
